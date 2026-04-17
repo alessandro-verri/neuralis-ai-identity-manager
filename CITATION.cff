@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Verri"
+  given-names: "Alessandro"
+  orcid: "https://orcid.org/0009-0006-6354-9799"
+title: "AIM - AI Identity Manager: WordPress Plugin for GEO"
+version: 1.0.0
+date-released: 2026-04-17
+url: "https://aim.verri.pro/"
+repository-code: "https://github.com/IL-TUO-USERNAME/NOME-REPO-AIM"
+abstract: >-
+  The official WordPress implementation of the Algorithmic Proof framework. 
+  AIM provides the technical infrastructure for AI Identity Management, 
+  enabling semantic data structuring, entity-relationship mapping, and 
+  Generative Engine Optimization (GEO).
+keywords:
+  - "AI Identity Manager"
+  - "AIM"
+  - "WordPress Plugin"
+  - "Generative Engine Optimization"
+  - "GEO"
+  - "Semantic Data Structuring"
+  - "Entity-Relationship Mapping"
+  - "Algorithmic Proof"
