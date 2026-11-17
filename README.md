@@ -1,68 +1,39 @@
-# AI Identity Manager (AIM)
+# Neuralis AI Identity Manager
 
-AI Identity Manager (AIM) is a WordPress plugin designed to structure websites for AI systems.
+Neuralis AI Identity Manager is a WordPress plugin for Generative Engine Optimization (GEO). Define your organization, people, services and products as reusable entities, then connect them to the pages that describe them. Neuralis publishes those relationships as Schema.org JSON-LD and a site knowledge graph.
 
-It transforms a website from a collection of pages into a structured system that can be interpreted, connected and used by AI models.
+**[Install the free plugin on WordPress.org](https://wordpress.org/plugins/neuralis-ai-identity-manager/)** · [Documentation and product site](https://aim.verri.pro/)
 
----
+![Neuralis AI Identity Manager interface in WordPress showing entity management and knowledge graph features](https://aim.verri.pro/wp-content/uploads/2026/03/AI-Identity-Manager-Generative-Engine-Optimization-WordPress-plugin-1024x683.png)
 
-## Why AIM exists
+## What Neuralis does
 
-Today, websites are still built for users and search engines.
+- Create entities once and reuse them across relevant WordPress pages.
+- Set the primary subject of a page and add secondary entities where relevant.
+- Generate JSON-LD, a connected knowledge graph and an `llms.txt` file.
+- Inspect existing JSON-LD and manage overlaps with supported plugins using Schema Control.
 
-But AI systems don’t browse pages.  
-They analyze information, relationships and consistency across sources to generate answers.
+## Example: connect a service to its provider
 
-This creates a gap.
+Create the provider as an organization and select it on the service entity. The service references the provider by its stable `@id`. Another service from the same organization can reference the same provider ID.
 
-A website can be:
-- fast  
-- optimized  
-- even well ranked  
+The excerpt below comes from a Neuralis test installation. It shows only the fields relevant to the relationship and uses `example.com` in place of the test hostname.
 
-…and still be irrelevant in AI-generated responses.
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://example.com/aim-kg/service/12",
+  "name": "Web Design",
+  "provider": {
+    "@id": "https://example.com/aim-kg/organization/1",
+    "@type": "Organization"
+  }
+}
+```
 
-AIM is built to close that gap.
-
----
-
-## What AIM does
-
-AIM structures your website at a semantic and technical level:
-
-- defines entities (company, services, people)  
-- connects them across pages  
-- builds a consistent knowledge structure  
-- provides clear signals for AI interpretation  
-
-The goal is simple:
-
-> make your website understandable for AI systems, not just readable for humans.
-
----
-
-## Generative Engine Optimization (GEO)
-
-AIM is built around Generative Engine Optimization (GEO).
-
-GEO focuses on structuring websites so that AI systems can understand and use information to generate answers.
-
-Learn more:  
-https://aim.verri.pro/
-
----
+[Follow the WordPress setup guide and check the published JSON-LD](https://aim.verri.pro/docs/how-to-connect-a-service-page-to-its-provider-in-wordpress/).
 
 ## About
 
-AI Identity Manager (AIM)  
-https://aim.verri.pro/
-
-Alessandro Verri  
-Marketing strategist & IT consultant focused on Generative Engine Optimization  
-https://verri.pro/
-
----
-
-## Status
-
-AIM is currently under development and testing.
+Developed by [Alessandro Verri](https://verri.pro/), marketing and Generative Engine Optimization consultant for small businesses.
